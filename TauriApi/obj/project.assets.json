@@ -12,16 +12,15 @@
         }
       },
       "TauriApiWrapper/1.2.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
-          "bin/placeholder/TauriApiWrapper.dll": {}
+          "lib/netcoreapp3.1/TauriApiWrapper.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TauriApiWrapper.dll": {}
+          "lib/netcoreapp3.1/TauriApiWrapper.dll": {}
         }
       }
     }
@@ -59,9 +58,16 @@
       ]
     },
     "TauriApiWrapper/1.2.0": {
-      "type": "project",
-      "path": "../../TauriApiWrapper/TauriApiWrapper/TauriApiWrapper.csproj",
-      "msbuildProject": "../../TauriApiWrapper/TauriApiWrapper/TauriApiWrapper.csproj"
+      "sha512": "bQ+ZJZV+1BIchyut/LSU83C6if5EuVesFyE054BEtDPaLM3pLD82qHxQc3s3S4jiH1/MWZ7WrZaW9rCEkXCaZw==",
+      "type": "package",
+      "path": "tauriapiwrapper/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.1/TauriApiWrapper.dll",
+        "tauriapiwrapper.1.2.0.nupkg.sha512",
+        "tauriapiwrapper.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -94,11 +100,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "C:\\Code\\TauriApiWrapper\\TauriApiWrapper\\TauriApiWrapper.csproj": {
-              "projectPath": "C:\\Code\\TauriApiWrapper\\TauriApiWrapper\\TauriApiWrapper.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -109,6 +111,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "TauriApiWrapper": {
+            "target": "Package",
+            "version": "[1.2.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
