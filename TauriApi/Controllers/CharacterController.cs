@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using TauriApiWrapper;
 using TauriApiWrapper.Objects;
 using TauriApiWrapper.Objects.Responses.Character;
+using System.Configuration;
 
 namespace TauriApi.Controllers
 {
@@ -17,16 +18,15 @@ namespace TauriApi.Controllers
     {
         [HttpGet]
         [Route("")]
-        public ApiResponse<CharacterSheet> GetCharacterClient()
+        public ActionResult<CharacterSheet> GetCharacterClient()
         {
-            var apiKey = "";
             var secretKey = apiKey;
 
             CharacterClient characterClient = new CharacterClient(apiKey, secretKey);
 
             var response = characterClient.GetCharacterSheet("Manao", TauriApiWrapper.Enums.Realm.Evermoon);
 
-            return response;
+            return Ok(response.Response);
         }
     }
 }
