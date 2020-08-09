@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TauriRaidTracker", "TauriRaidTracker\TauriRaidTracker.csproj", "{7581085C-4CEC-4791-8E45-AC953E85CC7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainApi", "TauriApi\MainApi.csproj", "{00661BAF-66DD-4E43-A191-EB6B7FB0EC5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApi", "MainApi\MainApi.csproj", "{5EEF65B5-E672-4F63-8DA4-8C75FEC2763C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7581085C-4CEC-4791-8E45-AC953E85CC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7581085C-4CEC-4791-8E45-AC953E85CC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7581085C-4CEC-4791-8E45-AC953E85CC7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00661BAF-66DD-4E43-A191-EB6B7FB0EC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00661BAF-66DD-4E43-A191-EB6B7FB0EC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00661BAF-66DD-4E43-A191-EB6B7FB0EC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00661BAF-66DD-4E43-A191-EB6B7FB0EC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EEF65B5-E672-4F63-8DA4-8C75FEC2763C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EEF65B5-E672-4F63-8DA4-8C75FEC2763C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EEF65B5-E672-4F63-8DA4-8C75FEC2763C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EEF65B5-E672-4F63-8DA4-8C75FEC2763C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
