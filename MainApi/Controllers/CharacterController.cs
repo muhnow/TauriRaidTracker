@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Configuration;
 using System.Text;
-using TauriApi.Services;
-using TauriApi.Models;
+using MainApi.Services;
+using MainApi.Models;
 using TauriApiWrapper;
 
-namespace TauriApi.Controllers
+namespace MainApi.Controllers
 {
     [Route("api/character")]
     [ApiController]

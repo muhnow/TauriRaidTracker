@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TauriApiWrapper.Objects.Responses.Character;
 
-namespace TauriApi.Models
+namespace MainApi.Models
 {
     public class Character
     {

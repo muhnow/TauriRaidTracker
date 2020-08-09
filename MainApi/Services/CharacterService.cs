@@ -1,12 +1,11 @@
-﻿using System;
+﻿using MainApi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using TauriApi.Models;
 using TauriApiWrapper;
 using TauriApiWrapper.Objects.Responses.Character;
 
-namespace TauriApi.Services
+namespace MainApi.Services
 {
     public class CharacterSheetService : ICharacterSheetService
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TauriApi.Models;
+using MainApi.Models;
 using TauriApiWrapper.Objects.Responses.Character;
 
-namespace TauriApi.Services
+namespace MainApi.Services
 {
     public class CharacterValidationService : ICharacterValidationService
     {
