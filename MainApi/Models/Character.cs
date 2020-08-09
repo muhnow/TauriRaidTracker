@@ -8,7 +8,8 @@ namespace MainApi.Models
 {
     public class Character
     {
-        public CharacterSheet Sheet { get; set; }
+        public string Name { get; set; }
+        //public CharacterSheet Sheet { get; set; }
 
         public IEnumerable<ValidationError> ValidationErrors { get; set; }
     }

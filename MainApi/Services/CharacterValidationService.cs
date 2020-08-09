@@ -11,7 +11,7 @@ namespace MainApi.Services
     {
         public IEnumerable<Character> ValidateCharacters(IEnumerable<CharacterSheet> characterSheets)
         {
-            throw new NotImplementedException();
+            return characterSheets.Select(c => new Character() { Name = c.Name });
         }
     }
 

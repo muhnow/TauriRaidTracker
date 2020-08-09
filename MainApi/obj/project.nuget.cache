@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IwMNqBioyWx0WRJV5KsgxIbEeb2dexTwlZ/zYKHmK2rlodPkIv7CPgli73GiSC9nnEBK0sfWWpNMICEKMzWnhw==",
+  "dgSpecHash": "YoGnORMvI254zRixP6JqDvi3wiOhBzuGqTLXDv1CqWtAm2qjdsefmxh4rM4u6MO1GQmnS3ZLBp82laA8RI75Yg==",
   "success": true,
   "projectFilePath": "C:\\Code\\TauriRaidTracker\\MainApi\\MainApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ethan Lawton\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\2.1.0\\microsoft.extensions.dependencyinjection.2.1.0.nupkg.sha512",
+    "C:\\Users\\Ethan Lawton\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Ethan Lawton\\.nuget\\packages\\netcore.autoregisterdi\\2.0.0\\netcore.autoregisterdi.2.0.0.nupkg.sha512",
     "C:\\Users\\Ethan Lawton\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Ethan Lawton\\.nuget\\packages\\tauriapiwrapper\\1.2.3\\tauriapiwrapper.1.2.3.nupkg.sha512"
   ],
