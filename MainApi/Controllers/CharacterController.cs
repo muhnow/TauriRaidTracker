@@ -27,17 +27,10 @@ namespace MainApi.Controllers
             this._characterValidationService = characterValidationService;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("sheets")]
-        public ActionResult<IEnumerable<Character>> GetCharacterSheets()
+        public ActionResult<IEnumerable<Character>> GetCharacterSheets([FromBody] IEnumerable<string> characterNames)
         {
-            IEnumerable<string> characterNames = new List<string>()
-            {
-                "Manao",
-                "Hoodie",
-                "MacProtPally"
-            };
-
             var characterSheets = this._characterSheetService.GetCharacterSheets(characterNames);
 
             if (characterSheets.Count() > 0)

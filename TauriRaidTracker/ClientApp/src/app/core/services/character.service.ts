@@ -15,9 +15,10 @@ export class CharacterService {
     }
 
     getCharacters(): Observable<any[]> {
-        console.log(this._baseUrl);
         let url = `${this._baseUrl}sheets`
 
-        return this.http.get<any>(url);
+        let characterNames: string[] = ["Manao", "Hoodie", "McProtPally", "Getscared"];
+
+        return this.http.post<any>(url, characterNames);
     }
 }
