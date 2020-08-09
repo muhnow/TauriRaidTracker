@@ -11,7 +11,7 @@ namespace MainApi.Services
     {
         public IEnumerable<Character> ValidateCharacters(IEnumerable<CharacterSheet> characterSheets)
         {
-            return characterSheets.Select(c => new Character() { Name = c.Name });
+            throw new NotImplementedException("Validating service implementation is in progress.");
         }
     }
 

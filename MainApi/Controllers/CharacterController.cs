@@ -17,37 +17,41 @@ namespace MainApi.Controllers
     [ApiController]
     public class CharacterController : ControllerBase
     {
-        private readonly ICharacterSheetService _characterSheetService;
+        private readonly ICharacterService _characterService;
         private readonly ICharacterValidationService _characterValidationService;
 
-        public CharacterController(ICharacterSheetService characterSheetService,
+        public CharacterController(ICharacterService characterService,
             ICharacterValidationService characterValidationService)
         {
-            this._characterSheetService = characterSheetService;
+            this._characterService = characterService;
             this._characterValidationService = characterValidationService;
         }
 
         [HttpPost]
-        [Route("sheets")]
-        public ActionResult<IEnumerable<Character>> GetCharacterSheets([FromBody] IEnumerable<string> characterNames)
+        [Route("")]
+        public ActionResult<IEnumerable<Character>> GetCharacters([FromBody] IEnumerable<string> characterNames)
         {
-            var characterSheets = this._characterSheetService.GetCharacterSheets(characterNames);
+            var characters = this._characterService.GetCharacters(characterNames);
 
-            if (characterSheets.Count() > 0)
+            if (characters.Count() > 0)
             {
-                var characters = this._characterValidationService.ValidateCharacters(characterSheets);
-
                 return this.Ok(characters);
+
+                //var characters = this._characterValidationService.ValidateCharacters(characterSheets);
+
+                //return this.Ok(characters);
             }
 
             return this.Ok();
         }
 
         [HttpGet]
-        [Route("ping")]
-        public ActionResult Ping()
+        [Route("{characterName}")]
+        public ActionResult<Character> GetCharacter(string characterName)
         {
-            return this.Ok();
+            var character = this._characterService.GetCharacter(characterName);
+
+            return this.Ok(character);
         }
     }
 }

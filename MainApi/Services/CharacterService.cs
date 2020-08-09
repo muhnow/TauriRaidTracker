@@ -1,4 +1,5 @@
 ﻿using MainApi;
+using MainApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,28 @@ using TauriApiWrapper.Objects.Responses.Character;
 
 namespace MainApi.Services
 {
-    public class CharacterSheetService : ICharacterSheetService
+    public class CharacterService : ICharacterService
     {
-        public IEnumerable<CharacterSheet> GetCharacterSheets(IEnumerable<string> characterNames)
+        public Character GetCharacter(string characterName)
         {
-            List<CharacterSheet> characterSheets = new List<CharacterSheet>();
+            Character characterSheet = new Character();
+
+            using (var characterClient = new CharacterClient(Credentials.ApiKey, Credentials.SecretKey))
+            {
+                var apiResponse = characterClient.GetCharacterSheet(characterName, TauriApiWrapper.Enums.Realm.Crystalsong);
+
+                if (apiResponse.IsSuccess)
+                {
+                    characterSheet = new Character(apiResponse.Response);
+                }
+            }
+
+            return characterSheet;
+        }
+
+        public IEnumerable<Character> GetCharacters(IEnumerable<string> characterNames)
+        {
+            List<Character> characterSheets = new List<Character>();
 
             using (var characterClient = new CharacterClient(Credentials.ApiKey, Credentials.SecretKey))
             {
@@ -21,7 +39,7 @@ namespace MainApi.Services
 
                     if (apiResponse.IsSuccess)
                     {
-                        characterSheets.Add(apiResponse.Response);
+                        characterSheets.Add(new Character(apiResponse.Response));
                     }
                 });
             }
@@ -30,8 +48,10 @@ namespace MainApi.Services
         }
     }
 
-    public interface ICharacterSheetService
+    public interface ICharacterService
     {
-        public IEnumerable<CharacterSheet> GetCharacterSheets(IEnumerable<string> characterNames);
+        public IEnumerable<Character> GetCharacters(IEnumerable<string> characterNames);
+
+        public Character GetCharacter(string characterName);
     }
 }

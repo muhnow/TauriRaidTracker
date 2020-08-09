@@ -15,9 +15,27 @@ export class CharacterService {
     }
 
     getCharacters(): Observable<any[]> {
-        let url = `${this._baseUrl}sheets`
+        let url = `${this._baseUrl}`
 
-        let characterNames: string[] = ["Manao", "Hoodie", "McProtPally", "Getscared"];
+        let characterNames: string[] = [
+            "Brasri",
+            "Crucia",
+            "Dispersed",
+            "Eyeconic",
+            "Flavortown",
+            "Getscared",
+            "Haas",
+            "Hoodie",
+            "Manao",
+            "Meme",
+            "Mirido",
+            "Momentine",
+            "Quant",
+            "Remic",
+            "Sevarax",
+            "Sinn",
+            "Spitcannon"
+        ]
 
         return this.http.post<any>(url, characterNames);
     }
