@@ -11,7 +11,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "TauriApiWrapper/1.2.0": {
+      "TauriApiWrapper/1.2.3": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
@@ -57,22 +57,22 @@
         "packageIcon.png"
       ]
     },
-    "TauriApiWrapper/1.2.0": {
-      "sha512": "bQ+ZJZV+1BIchyut/LSU83C6if5EuVesFyE054BEtDPaLM3pLD82qHxQc3s3S4jiH1/MWZ7WrZaW9rCEkXCaZw==",
+    "TauriApiWrapper/1.2.3": {
+      "sha512": "yXrhrGlv6sAjwYorJ5CL3jowPvyfWRb0d+wc29RMzWSMqukPj9NNGTgX31WuZpgHq1KalTI8HyrJ1ipqDD3Xqg==",
       "type": "package",
-      "path": "tauriapiwrapper/1.2.0",
+      "path": "tauriapiwrapper/1.2.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netcoreapp3.1/TauriApiWrapper.dll",
-        "tauriapiwrapper.1.2.0.nupkg.sha512",
+        "tauriapiwrapper.1.2.3.nupkg.sha512",
         "tauriapiwrapper.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "TauriApiWrapper >= 1.2.0"
+      "TauriApiWrapper >= 1.2.3"
     ]
   },
   "packageFolders": {
@@ -81,9 +81,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\TauriRaidTracker\\TauriApi\\TauriApi.csproj",
-      "projectName": "TauriApi",
-      "projectPath": "C:\\Code\\TauriRaidTracker\\TauriApi\\TauriApi.csproj",
+      "projectUniqueName": "C:\\Code\\TauriRaidTracker\\TauriApi\\MainApi.csproj",
+      "projectName": "MainApi",
+      "projectPath": "C:\\Code\\TauriRaidTracker\\TauriApi\\MainApi.csproj",
       "packagesPath": "C:\\Users\\Ethan Lawton\\.nuget\\packages\\",
       "outputPath": "C:\\Code\\TauriRaidTracker\\TauriApi\\obj\\",
       "projectStyle": "PackageReference",
@@ -114,7 +114,7 @@
         "dependencies": {
           "TauriApiWrapper": {
             "target": "Package",
-            "version": "[1.2.0, )"
+            "version": "[1.2.3, )"
           }
         },
         "imports": [

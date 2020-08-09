@@ -5,28 +5,42 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TauriApiWrapper;
-using TauriApiWrapper.Objects;
-using TauriApiWrapper.Objects.Responses.Character;
 using System.Configuration;
+using System.Text;
+using TauriApi.Services;
+using TauriApi.Models;
+using TauriApiWrapper;
 
 namespace TauriApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/character")]
     [ApiController]
     public class CharacterController : ControllerBase
     {
-        [HttpGet]
-        [Route("")]
-        public ActionResult<CharacterSheet> GetCharacterClient()
+        private readonly ICharacterSheetService _characterSheetService;
+        private readonly ICharacterValidationService _characterValidationService;
+
+        public CharacterController(ICharacterSheetService characterSheetService,
+            ICharacterValidationService characterValidationService)
         {
-            var secretKey = apiKey;
+            this._characterSheetService = characterSheetService;
+            this._characterValidationService = characterValidationService;
+        }
 
-            CharacterClient characterClient = new CharacterClient(apiKey, secretKey);
+        [HttpPost]
+        [Route("sheets")]
+        public ActionResult<IEnumerable<Character>> GetCharacterSheets([FromBody] IEnumerable<string> characterNames)
+        {
+            var characterSheets = this._characterSheetService.GetCharacterSheets(characterNames);
 
-            var response = characterClient.GetCharacterSheet("Manao", TauriApiWrapper.Enums.Realm.Evermoon);
+            if (characterSheets.Count() > 0)
+            {
+                var characters = this._characterValidationService.ValidateCharacters(characterSheets);
 
-            return Ok(response.Response);
+                return this.Ok(characters);
+            }
+
+            return this.Ok();
         }
     }
 }

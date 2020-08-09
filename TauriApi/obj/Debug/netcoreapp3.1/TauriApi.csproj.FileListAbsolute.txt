@@ -18,5 +18,6 @@ C:\Code\TauriRaidTracker\TauriApi\obj\Debug\netcoreapp3.1\TauriApi.pdb
 C:\Code\TauriRaidTracker\TauriApi\obj\Debug\netcoreapp3.1\TauriApi.genruntimeconfig.cache
 C:\Code\TauriRaidTracker\TauriApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Code\TauriRaidTracker\TauriApi\bin\Debug\netcoreapp3.1\TauriApiWrapper.dll
-C:\Code\TauriRaidTracker\TauriApi\bin\Debug\netcoreapp3.1\TauriApiWrapper.pdb
 C:\Code\TauriRaidTracker\TauriApi\obj\Debug\netcoreapp3.1\TauriApi.csproj.CopyComplete
+C:\Code\TauriRaidTracker\TauriApi\obj\Debug\netcoreapp3.1\TauriApi.csproj.CoreCompileInputs.cache
+C:\Code\TauriRaidTracker\TauriApi\obj\Debug\netcoreapp3.1\TauriApi.MvcApplicationPartsAssemblyInfo.cache
