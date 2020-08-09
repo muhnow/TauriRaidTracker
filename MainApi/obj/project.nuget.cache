@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "74slTcozKao6aygQnFhQr95y61At/Ic6DJlGxjW+FUAwOl0ZOfW8ghwiqYwdLzMQdOtJBw13NBQGGPBwDiktNw==",
+  "dgSpecHash": "IwMNqBioyWx0WRJV5KsgxIbEeb2dexTwlZ/zYKHmK2rlodPkIv7CPgli73GiSC9nnEBK0sfWWpNMICEKMzWnhw==",
   "success": true,
   "projectFilePath": "C:\\Code\\TauriRaidTracker\\MainApi\\MainApi.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ethan Lawton\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Ethan Lawton\\.nuget\\packages\\tauriapiwrapper\\1.2.3\\tauriapiwrapper.1.2.3.nupkg.sha512"
+  ],
   "logs": []
 }
