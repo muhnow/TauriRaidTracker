@@ -1,5 +1,21 @@
 
 <p>To help you get started, we've also set up:</p>
-<li *ngFor="let char of characters$ | async">
-  {{char.name}}
-</li>
+<div *ngIf="characters$ | async">
+  <mat-table [dataSource]="characters$ | async">
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *matCellDef="let character">{{character.name}}</mat-cell>
+      <ng-container matColumnDef="class">
+        <mat-header-cell  *matHeaderCellDef>Class</mat-header-cell>
+        <mat-cell *matCellDef="let character">{{character.class}}</mat-cell>
+      </ng-container></ng-container>
+      <ng-container matColumnDef="activeSpecName">
+        <mat-header-cell *matHeaderCellDef>Active Spec</mat-header-cell>
+        <mat-cell *matCellDef="let character">{{character.activeSpecName}}</mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+      <mat-row *matRowDef="let characterRowData; columns: columnsToDisplay"></mat-row>
+  </mat-table>
+</div>
+<mat-spinner *ngIf="!(characters$ | async)" #loading></mat-spinner>

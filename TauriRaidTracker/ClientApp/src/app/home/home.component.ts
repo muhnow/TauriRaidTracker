@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit{
     this.characterService = characterService;
   }
 
+  columnsToDisplay: string[] = ['name', 'activeSpecName', 'class'];
+
   characters$: Observable<any>;
   characterService: CharacterService;
 
